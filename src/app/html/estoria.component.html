@@ -1,0 +1,13 @@
+<ul>
+    <li *ngFor="let estoria of estorias">
+        <h2>Nome: {{estoria.nome}}</h2>
+        <h3>Conteúdo: {{estoria.descricao}}</h3>
+        <p>Pontos: {{estoria.pontos}}</p>
+        <ul>
+            <li *ngFor="let tarefa of tarefas">
+                <h3 *ngIf="tarefa.id_estoria === estoria.id">Nome: {{tarefa.nome}}</h3>
+                <h4 *ngIf="tarefa.id_estoria === estoria.id">Descrição: {{tarefa.descricao}}</h4>
+            </li>
+        </ul>
+    </li>
+</ul>
