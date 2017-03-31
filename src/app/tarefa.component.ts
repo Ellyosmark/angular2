@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Tarefa } from './model/tarefa';
-import { TAREFAS } from './mock/tarefa.mock';
+import { TarefaDataService } from './service/tarefa-data.service'
 
 @Component({
     selector: 'tarefa',
@@ -10,7 +10,9 @@ import { TAREFAS } from './mock/tarefa.mock';
 export class TarefaComponent {
     tarefas: Tarefa[];
 
+    constructor(private tarefaDataService: TarefaDataService) {}
+
     ngOnInit(){
-        this.tarefas = TAREFAS;
+        this.tarefas = this.tarefaDataService.getTarefas();
     }
 }

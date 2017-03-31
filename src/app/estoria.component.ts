@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Estoria } from './model/estoria';
 import { Tarefa } from './model/tarefa';
-import { ESTORIAS } from './mock/estorias.mock';
-import { TAREFAS } from './mock/tarefa.mock';
+import { TarefaDataService } from './service/tarefa-data.service'
+import { EstoriaDataService } from './service/estoria-data.service'
 
 @Component({
     selector: 'estoria',
@@ -13,9 +13,12 @@ export class EstoriaComponent {
     estorias: Estoria[];
     tarefas: Tarefa[];
 
+    constructor(private tarefaDataService: TarefaDataService,
+                private estoriaDataService: EstoriaDataService ) {}
+
     ngOnInit() {
-        this.estorias = ESTORIAS;
-        this.tarefas = TAREFAS;
+        this.tarefas = this.tarefaDataService.getTarefas();
+        this.estorias = this.estoriaDataService.getEstorias();
     }
 
     getTarefasByEstoriaId(idEstoria: number){
