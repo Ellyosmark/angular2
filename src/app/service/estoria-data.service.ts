@@ -7,4 +7,5 @@ export class EstoriaDataService {
     getEstorias(){
         return ESTORIAS;
     }
+
 }

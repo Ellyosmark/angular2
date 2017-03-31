@@ -8,6 +8,7 @@ export var ESTORIAS: Estoria[] = [
         nome: 'Estória 1',
         descricao: 'Essa é a primenira estória de usuário',
         pontos: 10,
+        isFinalizado: false,
         tarefas: TAREFAS
     },
     {
@@ -15,6 +16,7 @@ export var ESTORIAS: Estoria[] = [
         nome: 'Estória 2',
         descricao: 'Essa é a segunda estório de usuário',
         pontos: 8,
+        isFinalizado: false,
         tarefas: TAREFAS
     },
     {
@@ -22,6 +24,7 @@ export var ESTORIAS: Estoria[] = [
         nome: 'Estória 3',
         descricao: 'Essa é a terceira estória de usuário',
         pontos: 5,
+        isFinalizado: false,
         tarefas: TAREFAS
     }
 ]

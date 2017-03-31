@@ -21,6 +21,18 @@ export class EstoriaComponent {
         this.estorias = this.estoriaDataService.getEstorias();
     }
 
+
+    esconderEstoria(estoria: Estoria) {
+        estoria.isFinalizado = true;
+        alert(" + "+estoria.pontos+"Pontos!");
+    }
+
+
+    
+    getEstoriaById(idEstoria: number){
+        return this.estorias.find(t => t.id == idEstoria);
+    }
+
     getTarefasByEstoriaId(idEstoria: number){
         return this.tarefas.find(t => t.id_estoria === idEstoria);
     }
