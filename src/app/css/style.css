@@ -208,6 +208,11 @@ p {
     background-color:#f44336!important
 }
 
+.blue,.hover-red:hover{
+    color:#fff!important;
+    background-color:#0CC0FF!important
+}
+
 .gray-table:nth-child(even){
     background-color: #dddddd!important
 }
@@ -305,6 +310,25 @@ p {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.task{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    top: 30;
+    left: 10;
+    right: 10;
+    bottom: 10;
+}
+
+.taskbutton{
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 30;
+    bottom: 10;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
