@@ -5,5 +5,6 @@ export class Estoria {
     nome: string;
     descricao: string;
     pontos: number;
+    isFinalizado: Boolean;
     tarefas: Tarefa[];
 }
