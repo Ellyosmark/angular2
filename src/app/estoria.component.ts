@@ -34,6 +34,7 @@ export class EstoriaComponent {
     }
 
     getTarefasByEstoriaId(idEstoria: number){
-        return this.tarefas.find(t => t.id_estoria === idEstoria);
+        return this.tarefas.find(t => t.id_estoria === idEstoria);   
     }
+
 }

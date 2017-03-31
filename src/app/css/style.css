@@ -403,3 +403,7 @@ figure.taskboard.hover img {
   transform: scale(1.1);
 }
 
+ol{
+ list-style-type: none;
+}
+

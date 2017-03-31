@@ -1,11 +1,24 @@
-<figure class="taskboard" *ngFor="let estoria of estorias">
+<figure class="taskboard" *ngFor="let estoria of estorias" [hidden]="estoria.isFinalizado">
   <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample88.jpg" alt="sample88"/>
   <div class="pontos">Pontos: {{estoria.pontos}}</div>
   <figcaption>
     <h3>{{estoria.nome}}</h3>
     <p>Conteúdo: {{estoria.descricao}}   </p>
-    <a href="#" class="tarefas black positionLeft ">Ver Tarefas</a>
-    <a href="#" class="finalizar red positionRight ">Finalizar</a>
+    <a href="#" class="tarefas black positionLeft" >Lista de Tarefas</a>
+    <a href="#" class="finalizar red positionRight " (click)="esconderEstoria(estoria)">Finalizar</a>
   </figcaption>
+
+   <ol class="black">
+        <li *ngFor="let tarefa of tarefas">
+              <h4 *ngIf="tarefa.id_estoria === estoria.id">{{tarefa.id}} - Descrição: {{tarefa.descricao}}</h4>
+        </li>
+    </ol>
 </figure>
+
+
+
+
+
+
+  
 
