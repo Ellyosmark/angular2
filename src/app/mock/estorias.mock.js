@@ -4,14 +4,14 @@ exports.ESTORIAS = [
     {
         id: 1,
         nome: 'Estória 1',
-        descricao: 'Essa é a primenira estória de usuário',
+        descricao: 'Essa é a primeira estória de usuário',
         pontos: 10,
         tarefas: tarefa_mock_1.TAREFAS
     },
     {
         id: 2,
         nome: 'Estória 2',
-        descricao: 'Essa é a segunda estório de usuário',
+        descricao: 'Essa é a segunda estória de usuário',
         pontos: 8,
         tarefas: tarefa_mock_1.TAREFAS
     },
