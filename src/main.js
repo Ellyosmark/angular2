@@ -14,6 +14,8 @@ var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
 var app_component_1 = require('./app/app.component');
 var estoria_component_1 = require('./app/estoria.component');
 var tarefa_component_1 = require('./app/tarefa.component');
+var tarefa_data_service_1 = require('./app/service/tarefa-data.service');
+var estoria_data_service_1 = require('./app/service/estoria-data.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -21,7 +23,8 @@ var AppModule = (function () {
         core_1.NgModule({
             declarations: [app_component_1.AppComponent, estoria_component_1.EstoriaComponent, tarefa_component_1.TarefaComponent],
             imports: [platform_browser_1.BrowserModule],
-            bootstrap: [app_component_1.AppComponent]
+            bootstrap: [app_component_1.AppComponent],
+            providers: [tarefa_data_service_1.TarefaDataService, estoria_data_service_1.EstoriaDataService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

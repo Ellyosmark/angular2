@@ -9,12 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var tarefa_mock_1 = require('./mock/tarefa.mock');
+var tarefa_data_service_1 = require('./service/tarefa-data.service');
 var TarefaComponent = (function () {
-    function TarefaComponent() {
+    function TarefaComponent(tarefaDataService) {
+        this.tarefaDataService = tarefaDataService;
     }
     TarefaComponent.prototype.ngOnInit = function () {
-        this.tarefas = tarefa_mock_1.TAREFAS;
+        this.tarefas = this.tarefaDataService.getTarefas();
     };
     TarefaComponent = __decorate([
         core_1.Component({
@@ -22,7 +23,7 @@ var TarefaComponent = (function () {
             templateUrl: './app/html/tarefa.component.html',
             styleUrls: ['./app/css/style.css']
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [tarefa_data_service_1.TarefaDataService])
     ], TarefaComponent);
     return TarefaComponent;
 }());

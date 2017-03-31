@@ -9,14 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var estorias_mock_1 = require('./mock/estorias.mock');
-var tarefa_mock_1 = require('./mock/tarefa.mock');
+var tarefa_data_service_1 = require('./service/tarefa-data.service');
+var estoria_data_service_1 = require('./service/estoria-data.service');
 var EstoriaComponent = (function () {
-    function EstoriaComponent() {
+    function EstoriaComponent(tarefaDataService, estoriaDataService) {
+        this.tarefaDataService = tarefaDataService;
+        this.estoriaDataService = estoriaDataService;
     }
     EstoriaComponent.prototype.ngOnInit = function () {
-        this.estorias = estorias_mock_1.ESTORIAS;
-        this.tarefas = tarefa_mock_1.TAREFAS;
+        this.tarefas = this.tarefaDataService.getTarefas();
+        this.estorias = this.estoriaDataService.getEstorias();
     };
     EstoriaComponent.prototype.getTarefasByEstoriaId = function (idEstoria) {
         return this.tarefas.find(function (t) { return t.id_estoria === idEstoria; });
@@ -27,7 +29,7 @@ var EstoriaComponent = (function () {
             templateUrl: './app/html/estoria.component.html',
             styleUrls: ['./app/css/style.css']
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [tarefa_data_service_1.TarefaDataService, estoria_data_service_1.EstoriaDataService])
     ], EstoriaComponent);
     return EstoriaComponent;
 }());
