@@ -20,6 +20,16 @@ var EstoriaComponent = (function () {
         this.tarefas = this.tarefaDataService.getTarefas();
         this.estorias = this.estoriaDataService.getEstorias();
     };
+    EstoriaComponent.prototype.esconderEstoria = function (estoria) {
+        estoria.isFinalizado = true;
+        alert(" + " + estoria.pontos + "Pontos!");
+    };
+    EstoriaComponent.prototype.adicionarTarefa = function (tarefa) {
+        this.tarefas.push(tarefa);
+    };
+    EstoriaComponent.prototype.getEstoriaById = function (idEstoria) {
+        return this.estorias.find(function (t) { return t.id == idEstoria; });
+    };
     EstoriaComponent.prototype.getTarefasByEstoriaId = function (idEstoria) {
         return this.tarefas.find(function (t) { return t.id_estoria === idEstoria; });
     };

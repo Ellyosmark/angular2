@@ -1,1 +1,1 @@
-{"version":3,"file":"tarefa.js","sourceRoot":"","sources":["tarefa.ts"],"names":[],"mappings":";AAAA;IAAA;IAKA,CAAC;IAAD,aAAC;AAAD,CAAC,AALD,IAKC;AALY,cAAM,SAKlB,CAAA"}
+{"version":3,"file":"tarefa.js","sourceRoot":"","sources":["tarefa.ts"],"names":[],"mappings":";AAAA;IAMI,gBAAY,EAAU,EAAE,UAAmB,EAAE,IAAa,EAAE,SAAgB;QACxE,IAAI,CAAC,EAAE,GAAG,EAAE,CAAC;QACb,IAAI,CAAC,UAAU,GAAG,UAAU,CAAC;QAC7B,IAAI,CAAC,IAAI,GAAG,IAAI,CAAC;QACjB,IAAI,CAAC,SAAS,GAAG,SAAS,CAAC;IAC/B,CAAC;IACL,aAAC;AAAD,CAAC,AAZD,IAYC;AAZY,cAAM,SAYlB,CAAA"}

@@ -15,7 +15,12 @@
     </ol>
 
 
-    <a href="#" class="taskbutton blue" >Adicionar de Tarefa</a>
+    <a href="#" (click)="adicionarTarefa({
+        id: 1,
+        id_estoria: 1,
+        nome: 'Tarefa de Teste 1',
+        descricao: 'Descrição da tarefa de teste 1'
+    })" class="taskbutton blue" >Adicionar Tarefa</a>
 
 
     <input type="text" class="task"/>

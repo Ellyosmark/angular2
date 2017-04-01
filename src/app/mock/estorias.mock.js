@@ -6,6 +6,7 @@ exports.ESTORIAS = [
         nome: 'Estória 1',
         descricao: 'Essa é a primeira estória de usuário',
         pontos: 10,
+        isFinalizado: false,
         tarefas: tarefa_mock_1.TAREFAS
     },
     {
@@ -13,6 +14,7 @@ exports.ESTORIAS = [
         nome: 'Estória 2',
         descricao: 'Essa é a segunda estória de usuário',
         pontos: 8,
+        isFinalizado: false,
         tarefas: tarefa_mock_1.TAREFAS
     },
     {
@@ -20,6 +22,7 @@ exports.ESTORIAS = [
         nome: 'Estória 3',
         descricao: 'Essa é a terceira estória de usuário',
         pontos: 5,
+        isFinalizado: false,
         tarefas: tarefa_mock_1.TAREFAS
     }
 ];

@@ -17,6 +17,10 @@ var TarefaComponent = (function () {
     TarefaComponent.prototype.ngOnInit = function () {
         this.tarefas = this.tarefaDataService.getTarefas();
     };
+    TarefaComponent.prototype.adicionarTarefa = function () {
+        console.log('hahaha');
+        //this.tarefas.push(tarefa);
+    };
     TarefaComponent = __decorate([
         core_1.Component({
             selector: 'tarefa',

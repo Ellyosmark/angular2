@@ -27,7 +27,9 @@ export class EstoriaComponent {
         alert(" + "+estoria.pontos+"Pontos!");
     }
 
-
+    adicionarTarefa(tarefa: Tarefa) {
+        this.tarefas.push(tarefa);
+    }
     
     getEstoriaById(idEstoria: number){
         return this.estorias.find(t => t.id == idEstoria);

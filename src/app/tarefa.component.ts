@@ -15,4 +15,9 @@ export class TarefaComponent {
     ngOnInit(){
         this.tarefas = this.tarefaDataService.getTarefas();
     }
+
+    adicionarTarefa() {
+        console.log('hahaha');
+        //this.tarefas.push(tarefa);
+    }
 }
